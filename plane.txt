@@ -1,0 +1,6 @@
+https://www.flvcd.com/parse.php?kw=地址&format=super
+
+流畅 fluent
+标清 normal
+高清 high
+超清 super
