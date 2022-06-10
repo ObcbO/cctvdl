@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CCTVDL">
+    <target name="build">
+        <mkdir dir="build" />
+        <javac srcdir="src" destdir="build"  includeantruntime="on" />
+        <jar destfile="CCTVDL.jar" basedir="build" update="true">
+            <manifest>
+                <attribute name="Built-By" value="wukibaka" />
+                <attribute name="Specification-Title" value="CCTVDL" />
+                <attribute name="Main-Class" value="App" />
+            </manifest>
+        </jar>
+        <delete dir="build" />
+    </target>
+</project>
