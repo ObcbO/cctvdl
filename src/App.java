@@ -26,10 +26,11 @@ public class App {
     }
 
     private static void download(String link) {
-        String filename = Long.toString(System.currentTimeMillis());
+        String filename = System.currentTimeMillis() + ".mp4";
         new File(System.getProperty("user.dir") + "/videos").mkdir();
         try (BufferedInputStream in = new BufferedInputStream(new URL(link).openStream());
-                FileOutputStream fileOutputStream = new FileOutputStream(System.getProperty("user.dir") + "/videos/" + filename)) {
+                FileOutputStream fileOutputStream = new FileOutputStream(
+                        System.getProperty("user.dir") + "/videos/" + filename)) {
             byte[] dataBuffer = new byte[1024];
             int bytesRead;
             while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
