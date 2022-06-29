@@ -3,7 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Get {
     private URL visitURL = null;
@@ -45,7 +46,18 @@ public class Get {
     }
 
     private String[] process(String text) {
-        text.indexOf("......");
-        return null;
+        List<String> list = new ArrayList<>();
+
+        int start = 0;
+        int end = 0;
+        // text.indexOf("......");
+        while (text.contains("<a href=\"http://vod.cntv.myhwcdn.cn")) {
+            start = text.indexOf("<a href=\"", start) + 9;
+            end = text.indexOf("\" target=\"_blank\" >", start);
+            list.add(text.substring(start, end));
+            System.out.print(text.substring(start, end));
+            text = text.substring(end);
+        }
+        return list.toArray(new String[list.size()]);
     }
 }
