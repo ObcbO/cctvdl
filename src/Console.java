@@ -16,12 +16,11 @@ public class Console {
         System.out.print("请输入分断数: ");
         int num = sc.nextInt();
 
-        System.out.print("请输入第一个链接: ");
-        String all = sc.next();
-        all = all.substring(0, all.length() - 5);
+        System.out.print("请输入下载链接: ");
+        String downLink = sc.next();
 
         sc.close();
         
-        return new String[]{clarity, String.valueOf(num), all};
+        return new String[]{downLink, String.valueOf(num), clarity};
     }
 }

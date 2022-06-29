@@ -14,8 +14,11 @@ public class App {
 
     public static void main(String[] args) {
         String[] cGet = Console.get();
-        num = Integer.parseInt(cGet[2]);
-        all = cGet[3];
+        num = Integer.parseInt(cGet[1]);
+        all = cGet[2];
+
+        Get flvcd = new Get(cGet[0], cGet[2]);
+        flvcd.visit();
 
         System.out.println("开始下载分断视频");
         pb.setmax(num);

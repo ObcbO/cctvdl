@@ -4,9 +4,6 @@
     "java.project.referencedLibraries": {
         "include": [
             "lib/**/*.jar"
-        ],
-        "exclude": [
-            "e:\\Users\\Administrator\\Downloads\\isoparser-1.1.22.jar"
         ]
     }
 }
